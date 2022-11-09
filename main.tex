@@ -1,0 +1,93 @@
+% Please make sure you use the cover page available on Moodle. This template does not generate a cover page. 
+
+\documentclass[11pt, twoside]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage[a4paper, width=150mm, top=25mm, bottom=30mm, bindingoffset=20mm]{geometry}
+\usepackage[toc,page]{appendix}
+\usepackage{pdfpages}
+\usepackage{natbib}
+% \usepackage{dirtytalk}
+\usepackage{pdflscape}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{textcomp}
+\usepackage{fancyhdr}
+\usepackage{tikz}
+\usepackage{helvet}
+\usepackage{hyphenat}
+\usepackage{afterpage}
+\usepackage{xcolor}
+
+\renewcommand{\familydefault}{\sfdefault}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE, RO]{\thepage}
+\fancyhead[LO, RE]{\leftmark}
+\setlength{\headheight}{13.6pt}
+\linespread{1}
+\bibliographystyle{Harvard}
+\bibpunct{(}{)}{,}{a}{}{ }
+\graphicspath{ {images/}{appendices/} }
+\footskip = 15mm
+
+\begin{document}
+\pagecolor{violet}\afterpage{\nopagecolor}
+
+\pagenumbering{roman}
+
+\vspace*{\fill}
+\begingroup
+\centering
+
+\includegraphics[width=14cm]{rgulogo-white.png}
+
+
+
+\textcolor{white}{School of Computing
+Honours Report
+}
+
+
+\endgroup
+\vspace*{\fill}
+
+\chapter*{Abstract}
+The VFX industry accounts for millions of pounds every year, yet it is still a very niche sector when we consider the science behind it. While there are many different techniques that are part of this industry, compositing is necessary in every single one of them. This thesis will focus on the work necessary to build two different shots with digitally created 2D \& 3D assets in different visual planes. These assets will posteriorly be composited together using beginner friendly software and compared using a survey. While compositing will be the focus of the project, it will also briefly touch on every step of a movie production, as it is necessary to go over every single step of the VFX pipeline to achieve a working product. At the end, a survey will be done to gather different opinions on which technique is preferred and the results curated to then conclude on which technique was the most cost-effective for each working perspective.
+
+\chapter*{Acknowledgements}
+I would like to thank my parents for supporting me financially in this four-year journey, my friends for keeping my sanity in the most difficult times, every participant that was able to give me insightful information in the testing and results phase of the project and Jamie McDonald for supervising me in this long and daunting project. Finally, I would like to thank myself for being persistent, never quitting and always getting back on my knees every time I felt down.
+
+\tableofcontents
+
+\listoffigures
+
+\cleardoublepage
+\pagenumbering{arabic}
+
+\input{chapters/introduction}
+
+\input{chapters/chapter02}
+
+\input{chapters/chapter03}
+
+\input{chapters/chapter04}
+
+\input{chapters/chapter05}
+
+\input{chapters/conclusion}
+
+
+\nocite{*} %Take this out if you don't want it to show all the references but only the ones you've referenced 
+\bibliography{references}
+
+
+
+
+\input{chapters/appendix}
+
+
+
+\end{document}
